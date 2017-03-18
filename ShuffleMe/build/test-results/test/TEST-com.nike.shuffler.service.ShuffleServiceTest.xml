@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nike.shuffler.service.ShuffleServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2017-03-18T03:51:14" hostname="Dhruba-PC" time="0.045">
+  <properties/>
+  <testcase name="testGetDeck" classname="com.nike.shuffler.service.ShuffleServiceTest" time="0.043"/>
+  <testcase name="testDelete" classname="com.nike.shuffler.service.ShuffleServiceTest" time="0.0"/>
+  <testcase name="testPut" classname="com.nike.shuffler.service.ShuffleServiceTest" time="0.001"/>
+  <testcase name="testGetDeckList" classname="com.nike.shuffler.service.ShuffleServiceTest" time="0.0"/>
+  <system-out><![CDATA[23:51:14.137 [Test worker] DEBUG org.springframework.test.util.ReflectionTestUtils - Setting field [dao] of type [null] on target [com.nike.shuffle.service.ShuffleServiceImpl@ac09fc6] to value [dao]
+23:51:14.145 [Test worker] DEBUG org.springframework.test.util.ReflectionTestUtils - Setting field [dao] of type [null] on target [com.nike.shuffle.service.ShuffleServiceImpl@1491f594] to value [dao]
+23:51:14.146 [Test worker] DEBUG org.springframework.test.util.ReflectionTestUtils - Setting field [dao] of type [null] on target [com.nike.shuffle.service.ShuffleServiceImpl@3b37dd6] to value [dao]
+23:51:14.146 [Test worker] DEBUG org.springframework.test.util.ReflectionTestUtils - Setting field [dao] of type [null] on target [com.nike.shuffle.service.ShuffleServiceImpl@6262ed8a] to value [dao]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

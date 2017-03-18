@@ -1,0 +1,36 @@
+buildscript {
+  repositories {
+     mavenCentral()
+  }
+  dependencies {
+    classpath "org.springframework.boot:spring-boot-gradle-plugin:1.5.1.RELEASE"
+  }
+}
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+jar {
+    baseName = 'shuffler'
+    version =  '1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+ 
+dependencies {
+  	compile("org.springframework.boot:spring-boot-starter-web") {
+        exclude module: "spring-boot-starter-tomcat"
+    }
+    compile("org.springframework.boot:spring-boot-starter-jetty")
+    // end::jetty[]
+    // tag::actuator[]
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    testCompile group: 'junit', name: 'junit', version: '4.4'
+	testCompile group: 'org.mockito', name: 'mockito-all', version: '1.9.5'
+	testCompile group: 'org.springframework', name: 'spring-test', version: '4.0.3.RELEASE'
+}
+
+

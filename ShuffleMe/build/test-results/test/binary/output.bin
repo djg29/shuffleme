@@ -1,0 +1,4 @@
+È23:51:14.137 [Test worker] DEBUG org.springframework.test.util.ReflectionTestUtils - Setting field [dao] of type [null] on target [com.nike.shuffle.service.ShuffleServiceImpl@ac09fc6] to value [dao]
+É23:51:14.145 [Test worker] DEBUG org.springframework.test.util.ReflectionTestUtils - Setting field [dao] of type [null] on target [com.nike.shuffle.service.ShuffleServiceImpl@1491f594] to value [dao]
+È23:51:14.146 [Test worker] DEBUG org.springframework.test.util.ReflectionTestUtils - Setting field [dao] of type [null] on target [com.nike.shuffle.service.ShuffleServiceImpl@3b37dd6] to value [dao]
+É23:51:14.146 [Test worker] DEBUG org.springframework.test.util.ReflectionTestUtils - Setting field [dao] of type [null] on target [com.nike.shuffle.service.ShuffleServiceImpl@6262ed8a] to value [dao]
