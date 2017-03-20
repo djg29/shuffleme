@@ -1,5 +1,6 @@
 package com.nike.shuffle.service;
 
+import java.util.Arrays;
 import java.util.Random;
 
 import com.nike.shuffle.model.Card;
@@ -33,11 +34,30 @@ public class Utils {
 	
 	private static String[] handShuffleCards(String[] cards, int rand) {
 		if (rand == 0) return cards;
-		int length = cards.length;
-		String[] newCards = new String[length];
-		for (int i=0; i<length; i ++) {
-			if (i%2 == 0)newCards[i] = cards[i];
-			else newCards[i] = cards[length-1-i];
+		String[] left;
+		String[] right;
+		int mid = cards.length/2;
+		if (rand%2 == 0)  {
+			left = Arrays.copyOf(cards, mid);
+			right = Arrays.copyOfRange(cards, mid, cards.length);
+		} else {
+			right = Arrays.copyOf(cards, mid);
+			left = Arrays.copyOfRange(cards, mid, cards.length);
+		}
+		
+		String[] newCards = new String[cards.length];
+		// Interleave both arrays, merge into one
+		// size always even, no check for array out of bounds required
+		int j=0, k=0;
+		for (int i=0; i<cards.length; i++) {
+			if (i%2 == 0) {
+				newCards[i] = left[j];
+				j++;
+			}
+			else {
+				newCards[i] = right[k];
+				k++;
+			}
 		}
 		return handShuffleCards(newCards, rand-1);
 	}
