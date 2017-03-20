@@ -9,7 +9,7 @@ public class Utils {
 	
 	// Implementing Knuth's Shuffle
 	public static Deck randomShuffle(Deck deck) {
-		Card[] cards = deck.getCards();
+		String[] cards = deck.getCards();
 		Random rand = new Random();
 		for (int i=1; i<cards.length; i++) {
 			int det = rand.nextInt(i);
@@ -25,16 +25,16 @@ public class Utils {
 		Deck newDeck = new Deck();
 		Random rand = new Random();
 		int det = rand.nextInt(10);
-		Card[] cards = null;
+		String[] cards = null;
 		cards = handShuffleCards(deck.getCards(), det);
 		newDeck.setCards(cards);
 		return newDeck;
 	}
 	
-	private static Card[] handShuffleCards(Card[] cards, int rand) {
+	private static String[] handShuffleCards(String[] cards, int rand) {
 		if (rand == 0) return cards;
 		int length = cards.length;
-		Card[] newCards = new Card[length];
+		String[] newCards = new String[length];
 		for (int i=0; i<length; i ++) {
 			if (i%2 == 0)newCards[i] = cards[i];
 			else newCards[i] = cards[length-1-i];
@@ -42,8 +42,8 @@ public class Utils {
 		return handShuffleCards(newCards, rand-1);
 	}
 	
-	private static Card[] swap(Card[] cards, int i, int j) {
-		Card temp = cards[i];
+	private static String[] swap(String[] cards, int i, int j) {
+		String temp = cards[i];
 		cards[i] = cards[j];
 		cards[j] = temp;
 		return cards;
